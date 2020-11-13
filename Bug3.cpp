@@ -18,13 +18,13 @@ int main(int argc, char** argv) {
     int N = 20;
     int* x = new int[N];
     for (int i = 0; i < N; i++) {
-        x[i] = 2*i;
+        x[i] = 2*(i+1);
     }
     printArray(x, N);
     delete[] x;
     float* y = new float[N];
     for (int i = 0; i < N; i++) {
-        y[i] = 0.5*(y[i-1]+y[i]);
+        y[i] = 0.5*(y[i+1]+y[i]);
     }
     printArray(y, N);
     return 0;
